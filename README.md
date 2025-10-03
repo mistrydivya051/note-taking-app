@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-# note-taking-app
-=======
+
 # Note-Taking App
 
 ### 1. Clone the repository
@@ -80,5 +78,3 @@ To run use follow link:  [http://localhost:3000](http://localhost:3000)
 - Using environment variables for sensitive information
 - Creating seed scripts for quick testing
 - Debugging MongoDB and async code in Node.js
->>>>>>> 5877c43 (Initial commit)
-# note-taking-app
