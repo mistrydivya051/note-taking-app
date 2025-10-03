@@ -1,0 +1,16 @@
+<div class="container text-center my-5">
+  <h1 class="display-4 fw-bold text-dark animate__animated animate__fadeInDown">Welcome to NoteApp</h1>
+  <p class="lead text-muted mt-3 animate__animated animate__fadeInUp">
+    Quickly create and manage notes. Use the menu to register or login.
+  </p>
+   <% if (!user) { %>
+    <div class="mt-4 animate__animated animate__zoomIn">
+      <a href="/register" class="btn btn-primary btn-lg me-2">Register</a>
+      <a href="/login" class="btn btn-outline-secondary btn-lg">Login</a>
+    </div>
+  <% } else { %>
+    <div class="mt-4 animate__animated animate__zoomIn">
+      <a href="/notes" class="btn btn-primary btn-lg">Go to Notes</a>
+    </div>
+  <% } %>
+</div>

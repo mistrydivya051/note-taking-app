@@ -1,0 +1,62 @@
+<div class="d-flex align-items-center justify-content-center min-vh-100" style="background: linear-gradient(135deg, #f5f7fa, #c3cfe2);">
+  <div class="card shadow-lg border-0 rounded-4 p-4 animate__animated animate__fadeInDown" style="max-width: 420px; width: 100%; background: #fff;">
+
+    <!-- Header -->
+    <h2 class="text-center fw-bold mb-2">Create an Account</h2>
+    <p class="text-center text-muted mb-4">Sign up to start using Note App</p>
+
+    <!-- Error messages -->
+    <% if (errors && errors.length) { %>
+      <div class="alert alert-danger mb-4 rounded-3">
+        <% errors.forEach(function(e){ %>
+          <div>⚠️ <%= e.msg %></div>
+        <% }) %>
+      </div>
+    <% } %>
+
+    <!-- Register form -->
+    <form method="post" action="/register">
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Full Name</label>
+        <input type="text" name="fullName" value="<%= form.fullName || '' %>" required class="form-control form-control-lg rounded-3 shadow-sm">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Email</label>
+        <input type="email" name="email" value="<%= form.email || '' %>" required class="form-control form-control-lg rounded-3 shadow-sm">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Password</label>
+        <input type="password" name="password" required class="form-control form-control-lg rounded-3 shadow-sm">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label fw-semibold">Confirm Password</label>
+        <input type="password" name="confirmpassword" required class="form-control form-control-lg rounded-3 shadow-sm">
+      </div>
+
+      <button class="btn btn-primary w-100 py-2 rounded-3 shadow-sm fw-semibold transition">Sign Up</button>
+    </form>
+    <div class="d-flex align-items-center my-4">
+      <hr class="flex-grow-1">
+      <span class="px-2 text-muted small">or continue with</span>
+      <hr class="flex-grow-1">
+    </div>
+    <div class="d-grid gap-2">
+      <a href="/auth/google" class="btn btn-outline-secondary d-flex align-items-center justify-content-center gap-2 rounded-3 shadow-sm">
+        <img src="https://www.svgrepo.com/show/355037/google.svg" alt="Google" style="width: 20px; height: 20px;">
+        Continue with Google
+      </a>
+      <a href="/auth/github" class="btn btn-outline-secondary d-flex align-items-center justify-content-center gap-2 rounded-3 shadow-sm">
+        <img src="https://www.svgrepo.com/show/349375/github.svg" alt="GitHub" style="width: 20px; height: 20px;">
+        Continue with GitHub
+      </a>
+    </div>
+    <p class="text-center text-muted mt-4 mb-0">
+      Already have an account?
+      <a href="/login" class="fw-semibold text-decoration-none link-primary">Login</a>
+    </p>
+
+  </div>
+</div>
